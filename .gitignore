@@ -3,4 +3,4 @@
 *.class
 
 # Mengecualikan folder .gitignore sendiri.
-!.gitignore
+*.gitignore
