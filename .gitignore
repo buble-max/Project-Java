@@ -1,0 +1,6 @@
+
+# Mengecualikan file dengan ekstensi .class
+!*.class
+
+# Mengecualikan folder .gitignore sendiri.
+!.gitignore
