@@ -20,12 +20,22 @@ public class MainApp {
                     case 1: 
                         System.out.print("Nama: ");
                         String nama = input.nextLine();
+
                         System.out.print("NIM: ");
                         String nim = input.nextLine();
-                        System.out.print("Jurusan: ");
+                        
+                        System.out.print("Jurusan (Boleh Di Kosongkan): ");
                         String jurusan = input.nextLine();
-                        Mahasiswa mhs = new Mahasiswa(nama, nim, jurusan);
-                        db.tambahMahasiswa(mhs); // Panggil method untuk menambah ke database
+                       
+                        // Jika jurusan kosong, maka akan menampilkan "Belum di tentukan" 
+                        // dengan Overloading dari method tambahMahasiswa
+                        if (jurusan.trim().isEmpty())
+                        {
+                            db.tambahMahasiswa(nama, nim);
+                        } else {
+                            Mahasiswa mhs = new Mahasiswa(nama, nim, jurusan);
+                            db.tambahMahasiswa(mhs);
+                        }
                         break;
                     case 2:
                         db.tampilkanMahasiswa();
