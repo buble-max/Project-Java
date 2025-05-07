@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run MainApp with MySQL",
+            "request": "launch",
+            "mainClass": "MainApp",
+            "classPaths": [
+                "${workspaceFolder}/mysql-connector-j-9.2.0.jar",
+                "${workspaceFolder}"
+            ]
+        }
+    ]
+}
