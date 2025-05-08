@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class MainApp {
     public static void main(String[] args) {
-        try (Scanner input = new Scanner(System.in)) { // Membuat Scanner untuk membaca input dari keyboard (dengan try-with-resources)
+        // Membuat Scanner untuk membaca input dari keyboard
+        // (dengan try-with-resources)  objek Scanner akan secara otomatis ditutup setelah selesai digunakan.
+        try (Scanner input = new Scanner(System.in)) {  
+            
             DatabaseConnector db = new DatabaseConnector(); // Membuat objek DatabaseConnector untuk mengakses database
 
             while (true) { 
@@ -19,7 +22,7 @@ public class MainApp {
                 switch (pilihan) {
                     case 1: 
                         System.out.print("Nama: ");
-                        String nama = input.nextLine();
+                        String nama = input.nextLine();  //agar newline dibuang, sebelum membaca input string berikutnya.
 
                         System.out.print("NIM: ");
                         String nim = input.nextLine();

@@ -14,7 +14,7 @@ public class Mahasiswa extends Person {
         this.jurusan = "TIK";
     }
 
-    // Override method getNama() dari kelas Person untuk memberikan implementasi khusus
+    // Override method getNama() dari kelas Person
     @Override
     public String getNama() {
         // Mengembalikan nama dengan format "Mahasiswa: [nama]"
